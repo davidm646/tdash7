@@ -1,0 +1,31 @@
+# Vercel Environment Variables Setup
+
+When deploying this app to Vercel, you need to configure the following Environment Variables in the "Settings" > "Environment Variables" section of your project.
+
+## 1. Tesla Fleet API Keys
+These are used by the backend (api/ folder) to securely communicate with Tesla.
+
+TESLA_ACCESS_TOKEN
+  - Value: Your Tesla Access Token (Bearer Token).
+  - Scope: Server-side only (Backend).
+  - Note: If you are using the full OAuth flow, you would also need TESLA_CLIENT_ID and TESLA_CLIENT_SECRET here.
+
+## 2. Gemini AI Keys
+Used by the backend to perform vehicle diagnostics.
+
+API_KEY
+  - Value: Your Google Gemini API Key.
+  - Scope: Server-side only (Backend).
+
+## 3. Frontend Variables (Optional)
+If you add a "Login with Tesla" button in the future that redirects the user's browser, you would add:
+
+VITE_TESLA_CLIENT_ID
+  - Value: Your Tesla Client ID.
+  - Scope: Client-side (Frontend).
+  - Note: React (Vite) requires variables to start with "VITE_" to be exposed to the browser. This is equivalent to "NEXT_PUBLIC_" in Next.js.
+
+------------------------------------------------------------------
+IMPORTANT:
+Never put your Client Secret or Access Token in a VITE_ variable.
+------------------------------------------------------------------

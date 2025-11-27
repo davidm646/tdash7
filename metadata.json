@@ -1,0 +1,5 @@
+{
+  "name": "Tesla Fleet AI Commander",
+  "description": "A Tesla Fleet API dashboard enhanced with Gemini AI for vehicle diagnostics and insights. Features real-time telemetry visualization and natural language vehicle analysis.",
+  "requestFramePermissions": []
+}
